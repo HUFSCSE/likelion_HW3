@@ -1,0 +1,11 @@
+<h1>보낸 메일 함</h1><br>
+<% @every_post.each do |p| %>
+To : <%= p.email %><br>
+Title : <%= p.title %><br>
+Text : <%= p.text %><br>
+Time : <%= p.created_at %>
+<a href="/update_view/<%= p.id %>">[수정]</a>
+<a href="/destroy/<%= p.id %>">[삭제]</a>
+<hr>
+<% end %>
+<h1><a href="/">back</a></h1>
